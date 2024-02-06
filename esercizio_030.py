@@ -1,10 +1,9 @@
 import random
 
-
+cartella = [[0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0]]
 def genera_cartella(id: int)->dict:
-    cartella = [[0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0,0]]
     cont_riga = 0
     for i in range(3):
         n1 = random.randint(1,9)
@@ -27,7 +26,25 @@ def genera_cartella(id: int)->dict:
         cartella[cont_riga][8]=n9
         cont_riga += 1
     
-    print(cartella)
+    cont_riga = 0
+    libero1 = [0,1,2,3,4,5,6,7,8]
+    libero2 = [0,1,2,3,4,5,6,7,8]
+    libero3 = [0,1,2,3,4,5,6,7,8]
+    for i in range(3):
+        vuoto1 = random.choice(libero1)
+        vuoto2 = random.choice(libero2)
+        vuoto3 = random.choice(libero3)
+        cartella[0][vuoto1] = "-"
+        cartella[1][vuoto2] = "-"
+        cartella[2][vuoto3] = "-"
+        libero1.remove(vuoto1)
+        libero2.remove(vuoto2)
+        libero3.remove(vuoto3)
+
+    
+    print(cartella[0])
+    print(cartella[1])
+    print(cartella[2])
+    return cartella
 
 genera_cartella(2)
-
