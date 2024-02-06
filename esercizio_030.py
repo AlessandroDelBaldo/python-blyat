@@ -40,7 +40,6 @@ def genera_cartella(id: int)->dict:
         libero1.remove(vuoto1)
         libero2.remove(vuoto2)
         libero3.remove(vuoto3)
-
     
     print(cartella[0])
     print(cartella[1])
