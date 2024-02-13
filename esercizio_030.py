@@ -30,7 +30,7 @@ def genera_cartella(id: int)->dict:
     libero1 = [0,1,2,3,4,5,6,7,8]
     libero2 = [0,1,2,3,4,5,6,7,8]
     libero3 = [0,1,2,3,4,5,6,7,8]
-    for i in range(3):
+    for i in range(4):
         vuoto1 = random.choice(libero1)
         vuoto2 = random.choice(libero2)
         vuoto3 = random.choice(libero3)
